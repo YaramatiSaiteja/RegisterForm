@@ -1,0 +1,14 @@
+.container {
+    padding:10px;
+    text-align:center;
+}
+
+.card {
+    background-color:beige;
+    padding:20px;
+    min-width:500px;
+    min-height:500px;
+}
+.heading {
+    font-family:"Roboto",sans-serif;
+}
