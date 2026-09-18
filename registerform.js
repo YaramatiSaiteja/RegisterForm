@@ -19,4 +19,20 @@ usernameInput.addEventListener("blur",function(event){
    }
 });
 
+emailInput.addEventListener("blur",function(event){
+   if(event.target.value === ""){
+       emailError.textContent = "Email is required.";
+   } else {
+       emailError.textContent = "";  
+   }        
+});
+
+passwordInput.addEventListener("blur",function(event){
+   if(event.target.value === ""){
+       passwordError.textContent = "Password is required.";
+   } else { 
+        passwordError.textContent = "";
+   }
+   });
+
 
