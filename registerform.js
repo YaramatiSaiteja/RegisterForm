@@ -8,4 +8,21 @@ let passwordError = document.getElementById("passwordError");
 
 registerForm.addEventListener("submit", function(event) {
     event.preventDefault();
+    if(usernameInput.value.trim() === "") {
+        usernameError.textContent = "Username is required.";
+    } else {
+        usernameError.textContent = "";
+    }
+    if(emailInput.value.trim() === "") {
+        emailError.textContent = "Email is required.";
+    } else {
+        emailError.textContent = "";
+    }
+    if(passwordInput.value.trim() === "") {
+        passwordError.textContent = "Password is required.";
+    } else {
+        passwordError.textContent = "";
+    }
 });
+
+
