@@ -8,9 +8,15 @@
     padding:20px;
     min-width:500px;
     min-height:500px;
+    border-radius:20px;
 }
 .heading {
     font-family:"Roboto",sans-serif;
+}
+
+.label {
+    width:250px;
+    height:40px;
 }
 
 .text-success {
