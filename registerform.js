@@ -54,8 +54,23 @@ registerForm.addEventListener("submit", function(event) {
 
     let url  = "https://gorest.co.in/public/v2/users";
 
-
+    let options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${GOREST_TOKEN}`
+        },
+        body: JSON.stringify(formData)
+    }
+    fetch(url,options)
     
+    .then(function(response){
+        return response.json();
+    })
+
+    .then(function(jsonResponse){
+        console.log(jsonResponse);
+    });
 });
 
 
