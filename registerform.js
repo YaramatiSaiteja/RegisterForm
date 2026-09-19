@@ -6,9 +6,22 @@ let usernameError = document.getElementById("usernameError");
 let emailError = document.getElementById("emailError");
 let passwordError = document.getElementById("passwordError");
 
-registerForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    
+let formData = {
+    username: "",
+    email: "",
+    password: ""
+};
+
+usernameInput.addEventListener("change", function(event){
+    formData.username = event.target.value;
+});
+
+emailInput.addEventListener("change", function(event){
+    formData.email = event.target.value;
+});
+
+passwordInput.addEventListener("change", function(event){
+    formData.password = event.target.value;
 });
 
 usernameInput.addEventListener("blur",function(event){
@@ -33,6 +46,16 @@ passwordInput.addEventListener("blur",function(event){
    } else { 
         passwordError.textContent = "";
    }
-   });
+});
+
+
+registerForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let url  = "https://gorest.co.in/public/v2/users";
+
+
+    
+});
 
 
