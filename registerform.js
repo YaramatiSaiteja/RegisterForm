@@ -5,6 +5,7 @@ let passwordInput = document.getElementById("password");
 let usernameError = document.getElementById("usernameError");
 let emailError = document.getElementById("emailError");
 let passwordError = document.getElementById("passwordError");
+let successMessage = document.getElementById("successMessage");
 
 let formData = {
     username: "",
@@ -70,7 +71,10 @@ registerForm.addEventListener("submit", function(event) {
 
     .then(function(jsonResponse){
         console.log(jsonResponse);
-    });
+    })
+    .then(function(){
+       successMessage.textContent = "User registered successfully!";
+    })
 });
 
 
